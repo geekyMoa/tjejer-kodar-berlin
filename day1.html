@@ -1,0 +1,460 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Berlin Fredag</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/tjejerkodar_berlin.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section data-background-image="images/stock/berlin-markus-spiske-144806.jpg" data-background-size="50%" data-background-position="top right">
+          <h1 class="half-pull-left">Välkomna!</h1>
+        </section>
+
+        <!-- About me -->
+				<section>
+          <h1>Moa Nandorf</h1>
+          <p>Full stack JavaScript developer</p>
+          <p>@ Bonnier News</p>
+
+          <div class="scatter fragment">
+            <img src="images/moa/feet-up.jpg" />
+            <img src="images/moa/ior-blink.jpg" />
+            <img src="images/moa/klara.jpg" />
+            <img src="images/moa/ior-puss.jpg" />
+          </div>
+
+          <aside class="notes">
+            <small>
+              - full stack, what?<br />
+              - Jobbar bara med JS nu, front-end och back-end<br />
+              - Tidigare med front-end för WordPress och Drupal<br />
+              - hästmänniska, spelar liiite<br />
+              - gillar att bygga saker (webbsidor, appar, hus i sims, loftsängar, whatever)<br />
+            </small>
+          </aside>
+        </section>
+
+        <!-- dag 1 planering (visa de andra dagarna också?)-->
+        <section>
+          <div class="part-wrapper align-left">
+            <div class="one-third">
+              <h3>Fredag</h3>
+              <ul>
+                <li>HTML5 / CSS3</li>
+                <li>Modulär CSS</li>
+                <li>Designanalys</li>
+                <li>Programmering?</li>
+              </ul>
+
+              <div class="extras">
+                <h6>Extras</h6>
+                <ul>
+                  <li>Sass/SCSS</li>
+                  <li>Mobile first</li>
+                </ul>
+              </div>
+            </div>
+            <div class="one-third">
+              <h3>Lördag</h3>
+              <ul>
+                <li>Grundläggande programmeringskoncept</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="extras">
+                <h6>Extras</h6>
+                <ul>
+                  <li>functions</li>
+                  <li>let / const</li>
+                  <li>jQuery / React</li>
+                </ul>
+              </div>
+            </div>
+            <div class="one-third">
+              <h3>Söndag</h3>
+              <ul>
+                <li>JavaScript-repetition</li>
+                <li>Enskilt arbete</li>
+              </ul>
+
+              <div class="extras">
+                <h6>Extras</h6>
+                <ul>
+                  <li>Progressive enhancement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- front-end -->
+        <section>
+          <p>
+            Front-end?
+          </p>
+
+          <aside class="notes">
+            - börja från början, vad är front-end? <br />
+            - front-end vs back-end <br />
+            - postombud-liknelse<br />
+            -- front-end: hur ser desken ut? Vad kan man beställa osv?<br />
+            -- back-end: hela lagret, all "data"/paket, var ligger allting, hur hämtas det till desken
+          </aside>
+        </section>
+
+        <!-- html -->
+				<section>
+          <section>
+            <h1 class="straight-font">HTML</h1>
+            <div class="fragment Berlin-html-popup Berlin-html-popup--area1" data-fragment-index="1">
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;dog&gt;</span>
+                <img src="images/icons/html/dog2.svg" height="150" width="150" class="plain" />
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;/dog&gt;</span>
+            </div>
+            <div class="fragment Berlin-html-popup Berlin-html-popup--area2" data-fragment-index="1">
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;girl&gt;</span>
+                <img src="images/icons/html/student.svg" height="150" width="150" class="plain" />
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;/girl&gt;</span>
+            </div>
+            <div class="fragment Berlin-html-popup Berlin-html-popup--area3" data-fragment-index="1">
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;chair&gt;</span>
+                <img src="images/icons/html/chair.svg" height="150" width="150" class="plain" />
+              <span class="fragment Berlin-html-code" data-fragment-index="2">&lt;/chair&gt;</span>
+            </div>
+
+            <aside class="notes"><small>
+              <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+              <!-- <div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+              - Snabb genomgång av html<br />
+              - Markup language (beskriver bara det som finns)<br />
+              -- Djur. Det här är en katt, det här är en hund, det här är en zebra...<br />
+              -- Hundraser: klasser. Id: namn<br />
+              -- kan ha flera klasser (boxer rescue-dog retriever working-dog)
+              - består av taggar som kan ha attribut. Bildar element.
+              - attribut: id, data-[whatevs], https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+            </small></aside>
+          </section>
+
+          <!-- ett elements uppbyggnad 1 -->
+          <section>
+            <div class="left-align smaller-dogs smaller-font-size">
+              <div>
+                <span class="Berlin-html-code">
+                  &lt;dog<!-- whitespace do not remove
+                 --><span class="fragment" data-fragment-index="1" data-berlin-containstoggle="yes"><!--
+               --><span class="toggle-width toggle-hidden"><!--
+                  --><span class="attribute"> class</span>="<!--
+                   --><span class="fragment" data-fragment-index="4" data-berlin-containstoggle="yes"><!--
+                   --><span class="toggle-width toggle-hidden">head</span><!--
+                      --><span class="fragment" data-fragment-index="5" data-berlin-containstoggle="yes"><!--
+                      --><span class="toggle-width toggle-hidden"> terrier</span><!--
+                      --></span><!--
+                      --></span>"<!--
+                --></span><!--
+                --></span><span class="fragment" data-fragment-index="7" data-berlin-containstoggle="yes"><span class="toggle-width toggle-hidden"><span class="attribute"> id</span>="blomma"</span></span>&gt;<!--
+                --></span>
+                  <img src="images/icons/html/dog2.svg" height="100" width="100" class="plain" />
+                <span class="Berlin-html-code">&lt;/dog&gt;</span>
+              </div>
+              <div>
+                <span class="Berlin-html-code">
+                  &lt;dog<!-- whitespace do not remove
+                 --><span class="fragment" data-fragment-index="1" data-berlin-containstoggle="yes"><!--
+                 --><span class="toggle-width toggle-hidden"><!--
+                    --><span class="attribute"> class</span>="<!--
+                     --><span class="fragment" data-fragment-index="4" data-berlin-containstoggle="yes"><!--
+                     --><span class="toggle-width toggle-hidden">head</span><!--
+                        --><span class="fragment" data-fragment-index="5" data-berlin-containstoggle="yes"><!--
+                        --><span class="toggle-width toggle-hidden"> spaniel</span><!--
+                        --></span><!--
+                        --></span>"<!--
+                  --></span><!--
+                 --></span><span class="fragment" data-fragment-index="7" data-berlin-containstoggle="yes"><span class="toggle-width toggle-hidden"><span class="attribute"> id</span>="paprika"</span></span>&gt;<!--
+                --></span>
+                  <img src="images/icons/html/dog.svg" height="100" width="100" class="plain" />
+                <span class="Berlin-html-code">&lt;/dog&gt;</span>
+              </div>
+              <div>
+                <span class="Berlin-html-code">
+                  &lt;dog<!-- whitespace do not remove
+                 --><span class="fragment" data-fragment-index="1" data-berlin-containstoggle="yes"><!--
+                 --><span class="toggle-width toggle-hidden"><!--
+                    --><span class="attribute"> class</span>="<!--
+                     --><span class="fragment" data-fragment-index="4" data-berlin-containstoggle="yes"><!--
+                     --><span class="toggle-width toggle-hidden">head</span><!--
+                        --><span class="fragment" data-fragment-index="5" data-berlin-containstoggle="yes"><!--
+                        --><span class="toggle-width toggle-hidden"> bulldog</span><!--
+                        --></span><!--
+                        --></span>"<!--
+                  --></span><!--
+                 --></span><span class="fragment" data-fragment-index="7" data-berlin-containstoggle="yes"><span class="toggle-width toggle-hidden"><span class="attribute"> id</span>="morot"</span></span>&gt;<!--
+                --></span>
+                  <img src="images/icons/html/bulldog.svg" height="100" width="100" class="plain" />
+                <span class="Berlin-html-code">&lt;/dog&gt;</span>
+              </div>
+              <div>
+                <span class="Berlin-html-code">
+                  &lt;dog<!-- whitespace do not remove
+                 --><span class="fragment" data-fragment-index="1" data-berlin-containstoggle="yes"><!--
+                 --><span class="toggle-width toggle-hidden"><!--
+                    --><span class="attribute"> class</span>="<!--
+                     --><span class="fragment" data-fragment-index="4" data-berlin-containstoggle="yes"><!--
+                     --><span class="toggle-width toggle-hidden">body</span><!--
+                        --><span class="fragment" data-fragment-index="5" data-berlin-containstoggle="yes"><!--
+                        --><span class="toggle-width toggle-hidden"> bulldog</span><!--
+                        --></span><!--
+                        --></span>"<!--
+                  --></span><!--
+                 --></span><span class="fragment" data-fragment-index="7" data-berlin-containstoggle="yes"><span class="toggle-width toggle-hidden"><span class="attribute"> id</span>="fido"</span></span>&gt;<!--
+                --></span>
+                  <img src="images/icons/html/bulldog-sitting.svg" height="100" width="100" class="plain" />
+                <span class="Berlin-html-code">&lt;/dog&gt;</span>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="left-align" data-background-image="images/half-dark-bg.png" data-background-repeat="repeat-y" data-background-size="auto">
+            <div class="part-wrapper" style="font-size: 0.8em;">
+              <div class="half-page half-page-left half-page--darkBg">
+                <div class="monospace">
+                  <small>
+                    <div style="vertical-align: bottom;" >
+                      <div>
+                        <span class="fragment lizzyBennetImageTag" data-fragment-index="1">&lt;<span class="tagText">img</span> <span class="attribute">src</span>=<span class="string">"images/stock/lizzy.jpg"</span> <span class="attribute">alt</span>=<span class="string">"Lizzy Bennet"</span><span class="fragment" data-berlin-containstoggle="yes" data-fragment-index="2"><span class="toggle-width toggle-hidden"><span class="attribute"> class</span>=<span class="string">"portrait"</span></span></span>/&gt;</span>
+                      </div>
+                      <img class="fragment fade-out lizzyBennet" src="images/stock/lizzy.jpg" width="150" data-fragment-index="1" />
+                    </div>
+
+                    <div>
+                      <span class="fragment" data-fragment-index="1">&lt;<span class="tagText">h1</span>&gt;</span>
+                        Pride & Prejudice
+                      <span class="fragment" data-fragment-index="1">&lt;/<span class="tagText">h1</span>&gt;</span>
+                    </div>
+                    <br />
+                    <div>
+                      <span class="fragment" data-fragment-index="1">&lt;<span class="tagText">p</span><span class="fragment" data-berlin-containstoggle="yes" data-fragment-index="2"><span class="toggle-width toggle-hidden"><span class="attribute"> class</span>=<span class="string">"preamble"</span></span></span>&gt;</span>
+                        It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+                      <span class="fragment" data-fragment-index="1">&lt;/<span class="tagText">p</span>&gt;</span>
+                    </div>
+                    <br />
+                    <div>
+                      <span class="fragment" data-fragment-index="1">&lt;<span class="tagText">p</span>&gt;</span>
+                        However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
+                      <span class="fragment" data-fragment-index="1">&lt;/<span class="tagText">p</span>&gt;</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+              <div class="half-page half-page-right dark-text">
+                <div class="fragment proper-text" data-fragment-index="10">
+                  <img class="portrait" src="images/stock/lizzy.jpg" width="150" />
+                  <h1>Pride & Prejudice</h1>
+                  <p class="preamble">
+                    It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+                  </p>
+                  <p>
+                    However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
+
+          <!-- html -->
+          <section>
+            <div class="part-wrapper middle-align monospace">
+              <div class="half-page half-page-left">
+                  &lt;div&gt; <br />
+                  &lt;span&gt; <br />
+              </div>
+              <div class="half-page half-page-right">
+                  &lt;header&gt; <br />
+                  &lt;nav&gt; <br />
+                  &lt;main&gt; <br />
+                  &lt;article&gt; <br />
+                  &lt;aside&gt; <br />
+                  &lt;section&gt; <br />
+                  &lt;footer&gt;
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+
+        <section>
+          <section>
+            <img src="images/stock/css.gif" />
+          </section>
+
+          <section data-background-image="images/stock/css-neven-krcmarek-145603.jpg" data-background-size="50%" data-background-position="top right">
+            <ul class="half-pull-left" style="left: -5.5em;">
+              <li>Cascading?</li>
+              <li>Inheritance</li>
+              <li>Specificity</li>
+              <li>( Box model )</li>
+            </ul>
+          </section>
+
+          <section data-background-image="images/stock/waterfall-garrett-sears-91351.jpg" data-background-size="50%" data-background-position="top left">
+            <div class="half-pull-right">
+              <pre><code data-trim>
+                div {
+                  background-color: red;
+                }
+
+                .box {
+                  background-color: green;
+                }
+
+                #wrapped-gift {
+                  background-color: gold;
+                }</code></pre>
+
+                <small><a href="https://codepen.io/geekyMoa/pen/jwqYVe" target="_blank">Kodexempel</a></small>
+            </div>
+
+            <aside class="notes">
+              - om ingenting med högre prio motsäger det, använd stilarna.
+            </aside>
+          </section>
+
+          <section data-background-image="images/stock/waterfall-garrett-sears-91351.jpg" data-background-size="50%" data-background-position="top left">
+            <div class="half-pull-right">
+              <pre><code data-trim>
+                #wrapped-gift {
+                  background-color: gold;
+                }
+
+                div {
+                  background-color: red;
+                }
+
+                .box {
+                  background-color: green;
+                }</code></pre>
+
+                <small><a href="https://codepen.io/geekyMoa/pen/jwqYVe" target="_blank">Kodexempel</a></small>
+            </div>
+
+            <aside class="notes">
+              - om ingenting med högre prio motsäger det, använd stilarna.
+            </aside>
+          </section>
+        </section>
+
+
+        <section data-background-image="images/stock/lego-bricks.jpg">
+          <div style="background: rgba(255,255,255,0.8); padding: 2em 1em">
+            <h1 class="straight-font">Modulär CSS</h1>
+          </div>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+    <script src="js/switchBg.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+    <script>
+    (() => {
+      const toggleAttributeClass = (element) => {
+        if (element.classList.contains('toggle-hidden')) {
+          element.classList.remove('toggle-hidden');
+          element.classList.add('toggle-visible');
+        } else if(element.classList.contains('toggle-visible')) {
+          element.classList.remove('toggle-visible');
+          element.classList.add('toggle-hidden');
+        }
+      }
+
+      const getChildren = (element) => {
+        return [...element.childNodes].reduce((children, child) => {
+          if(child.nodeName === 'SPAN'){
+            children.push(child)
+          }
+          return children;
+        }, []);
+      }
+
+      const toggleWidth = (fragments) => {
+        var childNodes = fragments.reduce((frags, frag) => [...frags, ...getChildren(frag)], []);
+        console.log(childNodes);
+        childNodes.forEach((element) => {
+          toggleAttributeClass(element);
+        });
+      }
+
+      Reveal.addEventListener( 'fragmentshown', (event) => {
+        var fragments = event.fragments ? event.fragments : [ event.fragment ];
+        if(fragments[0].getAttribute('data-berlin-containstoggle')) {
+          toggleWidth(fragments);
+        }
+
+        if (fragments[1] && fragments[1].nodeName === 'IMG' && fragments[1].classList.contains('lizzyBennet')) {
+          if (fragments[1].style.display == '' || fragments[1].style.display === 'inline') {
+            fragments[1].style.display = 'none';
+            fragments[0].classList.add('lizzyBennet-padding');
+            fragments[0].classList.remove('lizzyBennetImageTag');
+          }
+        }
+      });
+
+      Reveal.addEventListener( 'fragmenthidden', (event) => {
+        var fragments = event.fragments ? event.fragments : [ event.fragment ];
+        if(fragments[0].getAttribute('data-berlin-containstoggle')) {
+          toggleWidth(fragments);
+        }
+
+        if (fragments[1] && fragments[1].nodeName === 'IMG' && fragments[1].classList.contains('lizzyBennet')) {
+          if (!fragments[1].style.display == '' || fragments[1].style.display === 'none') {
+            fragments[1].style.display = 'inline';
+            fragments[0].classList.remove('lizzyBennet-padding');
+            fragments[0].classList.add('lizzyBennetImageTag');
+          }
+        }
+      });
+
+    })();
+    </script>
+	</body>
+</html>

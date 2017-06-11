@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Berlin Lördag</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/tjejerkodar_berlin.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <div class="part-wrapper">
+            <div class="half-pull-left">
+              <img src="images/stock/code-works.png" height="600"/>
+            </div>
+            <div style="align-self: center;">
+              <span>Welcome to</span>
+              <h2>JavaScript!</h2><br />
+            </div>
+          </div>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+    <script src="js/switchBg.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+    <script>
+    (() => {
+      const toggleAttributeClass = (element) => {
+        if (element.classList.contains('toggle-hidden')) {
+          element.classList.remove('toggle-hidden');
+          element.classList.add('toggle-visible');
+        } else if(element.classList.contains('toggle-visible')) {
+          element.classList.remove('toggle-visible');
+          element.classList.add('toggle-hidden');
+        }
+      }
+
+      const getChildren = (element) => {
+        return [...element.childNodes].reduce((children, child) => {
+          if(child.nodeName === 'SPAN'){
+            children.push(child)
+          }
+          return children;
+        }, []);
+      }
+
+      const toggleWidth = (fragments) => {
+        var childNodes = fragments.reduce((frags, frag) => [...frags, ...getChildren(frag)], []);
+        console.log(childNodes);
+        childNodes.forEach((element) => {
+          toggleAttributeClass(element);
+        });
+      }
+
+      Reveal.addEventListener( 'fragmentshown', (event) => {
+        var fragments = event.fragments ? event.fragments : [ event.fragment ];
+        if(fragments[0].getAttribute('data-berlin-containstoggle')) {
+          toggleWidth(fragments);
+        }
+
+        if (fragments[1] && fragments[1].nodeName === 'IMG' && fragments[1].classList.contains('lizzyBennet')) {
+          if (fragments[1].style.display == '' || fragments[1].style.display === 'inline') {
+            fragments[1].style.display = 'none';
+            fragments[0].classList.add('lizzyBennet-padding');
+            fragments[0].classList.remove('lizzyBennetImageTag');
+          }
+        }
+      });
+
+      Reveal.addEventListener( 'fragmenthidden', (event) => {
+        var fragments = event.fragments ? event.fragments : [ event.fragment ];
+        if(fragments[0].getAttribute('data-berlin-containstoggle')) {
+          toggleWidth(fragments);
+        }
+
+        if (fragments[1] && fragments[1].nodeName === 'IMG' && fragments[1].classList.contains('lizzyBennet')) {
+          if (!fragments[1].style.display == '' || fragments[1].style.display === 'none') {
+            fragments[1].style.display = 'inline';
+            fragments[0].classList.remove('lizzyBennet-padding');
+            fragments[0].classList.add('lizzyBennetImageTag');
+          }
+        }
+      });
+
+    })();
+    </script>
+	</body>
+</html>
