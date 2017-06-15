@@ -72,7 +72,7 @@ body.bg-dark {
 .reveal .bg-dark h4,
 .reveal .bg-dark h5,
 .reveal .bg-dark h6 {
-  color: #333;
+  color: #eee;
 }
 
 .reveal h1 {
@@ -95,7 +95,12 @@ body.bg-dark {
   font-size: 3em;
 }
 
-.reveal h1.straight-font {
+.reveal h1.straight-font,
+.reveal h2.straight-font,
+.reveal h3.straight-font,
+.reveal h4.straight-font,
+.reveal h5.straight-font,
+.reveal h6.straight-font {
   font-family: Nunito;
   font-weight: 600;
 }
@@ -461,6 +466,10 @@ body.bg-dark {
   color: #98c379;
 }
 
+.number {
+  color: #1a6091;
+}
+
 
 
 .Berlin-html-popup {
@@ -575,4 +584,31 @@ body.bg-dark {
   text-shadow: none !important;
   position: relative;
   left: -3em;
+}
+
+.reveal .font-shadow {
+  text-shadow: 0 0 30px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,.8);
+}
+
+.reveal h1.boxmodel {
+  display: inline-block;
+  padding: 2em;
+  border: 10px solid deeppink;
+  background: rgba(255, 20, 147,.5);
+  font-size: 0.7em;
+}
+
+.reveal h1.boxmodel div {
+  padding: 2em;
+  display: inline-block;
+  border: 1px solid lime;
+  background: rgba(0, 255, 0, .5);
+}
+
+.reveal h1.boxmodel span {
+  display: inline-block;
+  padding: 3px;
+  line-height: 1;
+  border: 0px solid cyan;
+  background: rgba(0, 255, 255, .5);
 }

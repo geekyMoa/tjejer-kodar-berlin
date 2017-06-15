@@ -104,6 +104,15 @@
               </div>
             </div>
           </div>
+
+          <aside class="notes">
+            - Ungefärlig planering, går att rucka på (eller dålig idé om folk gillar strikt planering?)
+            - EN struktur, vad är struktur? vad innebär struktur, varför är det viktigt?<br />
+            - Gruppmål:
+            -- fail early, vikten av att göra fel<br />
+            -- prestigelöshet<br />
+            -- fråga allt, inga dumma frågor<br />
+          </aside>
         </section>
 
         <!-- front-end -->
@@ -117,7 +126,8 @@
             - front-end vs back-end <br />
             - postombud-liknelse<br />
             -- front-end: hur ser desken ut? Vad kan man beställa osv?<br />
-            -- back-end: hela lagret, all "data"/paket, var ligger allting, hur hämtas det till desken
+            -- back-end: hela lagret, all "data"/paket, var ligger allting, hur hämtas det till desken<br />
+            - git, github och github desktop?
           </aside>
         </section>
 
@@ -283,8 +293,6 @@
             </aside>
           </section>
 
-
-          <!-- html -->
           <section>
             <div class="part-wrapper middle-align monospace">
               <div class="half-page half-page-left">
@@ -302,10 +310,17 @@
               </div>
             </div>
           </section>
+          <section>
+            <pre><code data-trim>
+              <div
+                class="Person"
+                id="ron"
+                data-secret-fear="spiders">
+                ...
+              </div>
+            </code></pre>
+          </section>
         </section>
-
-
-
 
         <section>
           <section>
@@ -340,7 +355,8 @@
             </div>
 
             <aside class="notes">
-              - om ingenting med högre prio motsäger det, använd stilarna.
+              - om ingenting med högre prio motsäger det använder elementen stilarna.
+              - läses och prioriteras annars uppifrån och ner
             </aside>
           </section>
 
@@ -363,16 +379,105 @@
             </div>
 
             <aside class="notes">
-              - om ingenting med högre prio motsäger det, använd stilarna.
+              - så vad händer här?
             </aside>
+          </section>
+          <section>
+            <pre><code data-trim>
+
+              <div class="Card">
+                <h1>Jayne</h1>
+                <p>I'll be in my bunk.</p>
+              </div>
+
+              <div class="Extras">
+                <div class="Card">
+                  <h1>Wash</h1>
+                  <p>Did he just go crazy and fall asleep?</p>
+                </div>
+              </div>
+
+            </code></pre>
+            <pre><code data-trim>
+              .Card {
+                margin: 20px;
+                padding: 20px;
+                background: #eee;
+                box-shadow: 0 0 5px rgba(100,100,100,.5);
+              }
+            </code></pre>
+            <p><small><a target="_blank" href="https://codepen.io/geekyMoa/pen/mwrLLO">Kodexempel</a></small></p>
+          </section>
+          <section>
+            <ul>
+              <li><code>div > p</code></li>
+              <li><code>p + p</code></li>
+              <li><code>p:first-child</code></li>
+              <li><code>p:nth-child()</code></li>
+              <li><code>div:before</code> och <code>div:after</code></li>
+            </ul>
+            <p><small><a target="_blank" href="https://codepen.io/geekyMoa/pen/zzKjgO">Kodexempel</a></small></p>
+          </section>
+
+          <section data-background-image="images/stock/boxmodel-samuel-zeller-118195.jpg">
+            <h1 class="boxmodel"><div><span>Box model</span></div></h1>
+            <br />
+            <small><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank">MDN intro till box model</a></small>
           </section>
         </section>
 
 
-        <section data-background-image="images/stock/lego-bricks.jpg">
-          <div style="background: rgba(255,255,255,0.8); padding: 2em 1em">
-            <h1 class="straight-font">Modulär CSS</h1>
-          </div>
+        <section>
+          <section data-background-image="images/stock/lego-bricks.jpg">
+            <div style="background: rgba(255,255,255,0.8); padding: 2em 1em">
+              <h1 class="straight-font">Modulär CSS</h1>
+            </div>
+
+            <aside class="notes">
+              - utarbetat för att lösa vissa problem med hur man skriver CSS i stora projekt<br />
+              - finns flera olika "metoder" (bem, suit, atomic, smacss) som ibland går att kombinera<br />
+              - legoblock<br />
+            </aside>
+          </section>
+
+          <section data-background-image="images/stock/components-cityscape-drone-view-city.jpg" data-background-size="50%" data-background-position="top left">
+            <div class="half-pull-right" style="right: calc(-50% + -2em);">
+              <h2>Komponenter</h2>
+              is the shit!
+            </div>
+            <aside class="notes">
+              - enskilda "atomer" som går att kombinera till "molekyler", och bygga ihop i olika kombinationer<br />
+              - exempel: atomic design
+              - klipp och klistra-papper<br />
+              - titta på designer, hitta komponenter<br />
+              - övning tillsammans - komponentifiera en design?<br />
+              - skissa på några olika<br />
+              - presentera deras slutövning: koda upp Tjejer Kodars sajt med komponenter.<br />
+              - <br />
+              - <br />
+              - <br />
+              - <br />
+            </aside>
+          </section>
+
+          <section>
+            <pre><code>
+              .Intro {}
+
+              .Intro-description {}
+
+              .Intro-description--fancy {}
+
+              .Intro-description.is-hidden {}
+
+              .Intro-illustration {}
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Workshop!</h1>
+          </section>
         </section>
 			</div>
 		</div>
