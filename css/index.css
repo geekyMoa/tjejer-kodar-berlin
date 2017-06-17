@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700');
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 4vw;
+  background: snow;
+  color: #333;
+}
+
+@media all and (min-width: 600px) {
+  body {
+    font-size: 3vw;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  body {
+    font-size: 2vw;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #666;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: hotpink;
+}
+
+a:visited {
+  color: hotpink;
+}
+
+a:active {
+  color: hotpink;
+}
+
+a:hover {
+  color: deeppink;
+  text-decoration: underline;
+}
+
+.Wrapper {
+  background: white;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Header {
+  background: white;
+  padding: 1vw;
+}
+
+.Header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.Header-inner-nav {
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Header-inner-courseName {
+  flex-grow: 1;
+}
+
+.Header-inner-courseName,
+.Header-inner-nav-item {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.Header-inner-nav-item {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.Section {
+  max-width: 1400px;
+  padding: 3vw;
+}
